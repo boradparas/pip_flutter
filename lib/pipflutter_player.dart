@@ -1,24 +1,24 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-import 'package:pip_flutter/pipflutter_player_configuration.dart';
-import 'package:pip_flutter/pipflutter_player_controller.dart';
-import 'package:pip_flutter/pipflutter_player_controller_event.dart';
-import 'package:pip_flutter/pipflutter_player_controller_provider.dart';
-import 'package:pip_flutter/pipflutter_player_data_source.dart';
-import 'package:pip_flutter/pipflutter_player_data_source_type.dart';
-import 'package:pip_flutter/pipflutter_player_event.dart';
-import 'package:pip_flutter/pipflutter_player_event_type.dart';
-import 'package:pip_flutter/pipflutter_player_utils.dart';
-import 'package:pip_flutter/pipflutter_player_with_controls.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:wakelock/wakelock.dart';
 
+import 'pipflutter_player_configuration.dart';
+import 'pipflutter_player_controller.dart';
+import 'pipflutter_player_controller_event.dart';
+import 'pipflutter_player_controller_provider.dart';
+import 'pipflutter_player_data_source.dart';
+import 'pipflutter_player_data_source_type.dart';
+import 'pipflutter_player_event.dart';
+import 'pipflutter_player_event_type.dart';
+import 'pipflutter_player_utils.dart';
+import 'pipflutter_player_with_controls.dart';
+
 ///Widget which uses provided controller to render video player.
 class PipFlutterPlayer extends StatefulWidget {
-  const PipFlutterPlayer({Key? key, required this.controller})
-      : super(key: key);
+  const PipFlutterPlayer({super.key, required this.controller});
 
   factory PipFlutterPlayer.network(
     String url, {
